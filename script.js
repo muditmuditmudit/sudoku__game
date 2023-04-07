@@ -8,7 +8,7 @@ let error = 0;
 function generateSudoku() {
    let board = Array.from({ length: 9 }, () => Array.from({ length: 9 }, () => 0));
    generateHelper(board, 0, 0);
-   let emptyBoxes = 40; // set the number of empty boxes
+   let emptyBoxes = 50; // set the number of empty boxes
    while (emptyBoxes > 0) {
      let row = Math.floor(Math.random() * 9);
      let col = Math.floor(Math.random() * 9);
@@ -251,6 +251,7 @@ function addNumber() {
             location.reload();
          }
       } else {
+         location.href = "https://cdn.dribbble.com/users/311928/screenshots/6574034/congrats1.png";
          alert("Congratuations! You win the puzzle!");
       }
    }
